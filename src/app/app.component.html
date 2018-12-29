@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+	<h1>
+		Welcome To {{ title }}!
+	</h1>
+	<br />
+	JSON URL : <a routerLink = "">{{jsonUrl}}</a> to check!
+	
+</div>
+<br />
+<br />
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Person Id</th>
+						<th>Person Name</th>
+						<th>Person Email</th>
+						<th>Person Contact Number</th>						
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let record of userData">
+						<td>{{record.userId}}</td>
+						<td>{{record.name}}</td>
+						<td>{{record.emailId}}</td>
+						<td>{{record.contactNo}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>
+
+<router-outlet></router-outlet>
